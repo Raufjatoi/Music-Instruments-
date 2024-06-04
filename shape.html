@@ -200,52 +200,70 @@
             audio.currentTime = 0; // Rewind to the start
             audio.play();
         }
-
-        // Define the sequence of notes for "Piano Man" or any other melody
         const melody = [
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key01.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key03.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key05.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key06.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key08.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key10.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key12.ogg' }, // S
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key10.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key12.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key13.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key15.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key17.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key18.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key20.ogg' }, // S
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key22.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key24.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key25.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key27.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key29.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key30.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key32.ogg' }, // S
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key34.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key36.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key37.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key39.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key41.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key42.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key44.ogg' }, // S
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key46.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key48.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key49.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key51.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key53.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key54.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key56.ogg' }, // S
-            { keyCode: 65, duration: 500, note: '24-piano-keys/key58.ogg' }, // A
-            { keyCode: 83, duration: 500, note: '24-piano-keys/key60.ogg' }, // S
-            { keyCode: 68, duration: 500, note: '24-piano-keys/key61.ogg' }, // D
-            { keyCode: 70, duration: 500, note: '24-piano-keys/key63.ogg' }, // F
-            { keyCode: 71, duration: 500, note: '24-piano-keys/key65.ogg' }, // G
-            { keyCode: 65, duration: 1000, note: '24-piano-keys/key66.ogg' }, // A
-            { keyCode: 83, duration: 1000, note: '24-piano-keys/key68.ogg' }, // S
-        ];
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key08.ogg' }, // G
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key10.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key12.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key13.ogg' }, // D
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key17.ogg' }, // G
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key18.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key20.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key22.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key27.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key29.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key30.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key32.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key34.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key39.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key41.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key42.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key44.ogg' }, // S
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key46.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key48.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key49.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key51.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key53.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key54.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key56.ogg' }, // S
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key58.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key60.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key61.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key63.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key65.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key66.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key68.ogg' },
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key08.ogg' }, // G
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key10.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key12.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key13.ogg' }, // D
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key17.ogg' }, // G
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key18.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key20.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key22.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key27.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key29.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key30.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key32.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key34.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key39.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key41.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key42.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key44.ogg' }, // S
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key46.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key48.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key49.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key51.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key53.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key54.ogg' }, // A
+    { keyCode: 83, duration: 1000, note: '24-piano-keys/key56.ogg' }, // S
+    { keyCode: 65, duration: 500, note: '24-piano-keys/key58.ogg' }, // A
+    { keyCode: 83, duration: 500, note: '24-piano-keys/key60.ogg' }, // S
+    { keyCode: 68, duration: 500, note: '24-piano-keys/key61.ogg' }, // D
+    { keyCode: 70, duration: 500, note: '24-piano-keys/key63.ogg' }, // F
+    { keyCode: 71, duration: 500, note: '24-piano-keys/key65.ogg' }, // G
+    { keyCode: 65, duration: 1000, note: '24-piano-keys/key66.ogg' },  // S
+];
+
 
         // Function to play melody automatically
         function playMelody() {
